@@ -1,0 +1,28 @@
+{
+  "name": "node-kafka-rest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
+    "kafka:start": "./kafka-setup/start.sh",
+    "kafka:stop": "./kafka-setup/stop.sh",
+    "kafka:logs": "docker-compose --file ./kafka-setup/docker-compose.yml logs -f",
+    "kafka:build": "docker-compose --file ./kafka-setup/docker-compose.yml build",
+    "test": "npm run lint && istanbul cover _mocha -- -R spec test/int/* && istanbul check-coverage --statements 50",
+    "rd-lt": "NODE_ENV=production node ./perf/RDLoadTest.js"
+  },
+  "repository": "git@github.com:nodefluent/node-kafka-rest.git",
+  "author": "nodefluent",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "debug": "^3.0.1",
+    "express": "^4.15.4",
+    "sinek": "^6.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.5.0"
+  }
+}

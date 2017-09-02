@@ -1,0 +1,1 @@
+# node-kafka-rest CHANGELOG
