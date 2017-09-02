@@ -12,6 +12,7 @@ module.exports= {
   logger,
   noptions: {
     //"debug": "all",
+    //"metadata.broker.list": "localhost:9092", // for local development with kafka-setup
     "metadata.broker.list": "kafka:9092",
     "group.id": "node-kafka-rest",
     "event_cb": true,
