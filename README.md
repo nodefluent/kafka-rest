@@ -1,6 +1,6 @@
 # node-kafka-rest
 wip
 
-## Development
+## Quick start
 - Run kafka-setup: `yarn run kafka:start`
 - Open kafka topics ui: `http://localhost:8000`
