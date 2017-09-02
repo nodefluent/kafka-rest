@@ -14,7 +14,7 @@ module.exports= {
     //"debug": "all",
     //"metadata.broker.list": "localhost:9092", // for local development with kafka-setup
     "metadata.broker.list": "kafka:9092",
-    "group.id": "node-kafka-rest",
+    "group.id": "kafka-rest",
     "event_cb": true,
     "compression.codec": "none",
   },

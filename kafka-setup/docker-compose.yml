@@ -27,7 +27,7 @@ services:
       - /tmp/kafka-data/logs:/logs
       - /var/run/docker.sock:/var/run/docker.sock
 
-  node-kafka-rest:
+  kafka-rest:
     build:
       context: ../
       dockerfile: Dockerfile
@@ -35,8 +35,10 @@ services:
       - 8082:8082
     links:
       - kafka
+      - zookeeper
     depends_on:
       - kafka
+      - zookeeper
     environment:
       DEBUG: "*"
 
@@ -45,9 +47,9 @@ services:
     ports:
       - 8000:8000
     links:
-      - node-kafka-rest
+      - kafka-rest
     depends_on:
-      - node-kafka-rest
+      - kafka-rest
     environment:
-      KAFKA_REST_PROXY_URL: "http://node-kafka-rest:8082"
+      KAFKA_REST_PROXY_URL: "http://kafka-rest:8082"
       PROXY: "true"
