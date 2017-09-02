@@ -10,8 +10,7 @@
     "kafka:stop": "./kafka-setup/stop.sh",
     "kafka:logs": "docker-compose --file ./kafka-setup/docker-compose.yml logs -f",
     "kafka:build": "docker-compose --file ./kafka-setup/docker-compose.yml build",
-    "test": "npm run lint && istanbul cover _mocha -- -R spec test/int/* && istanbul check-coverage --statements 50",
-    "rd-lt": "NODE_ENV=production node ./perf/RDLoadTest.js"
+    "test": "npm run lint && istanbul cover _mocha -- -R spec test/int/* && istanbul check-coverage --statements 50"
   },
   "repository": "git@github.com:nodefluent/node-kafka-rest.git",
   "author": "nodefluent",
