@@ -1,5 +1,6 @@
-# node-kafka-rest
-wip
+# Node Kafka REST API
+
+wip :fire:
 
 ## Quick start
 - Run kafka-setup: `yarn run kafka:start`
