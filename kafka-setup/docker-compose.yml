@@ -40,7 +40,7 @@ services:
       - kafka
       - zookeeper
     environment:
-      DEBUG: "*"
+      DEBUG: "kafka-rest:*"
 
   kafka-topics-ui:
     image: landoop/kafka-topics-ui

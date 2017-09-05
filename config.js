@@ -13,7 +13,7 @@ const config = {
   consumer: {
     noptions: {
       //"debug": "all",
-      "metadata.broker.list": "localhost:9092",
+      "metadata.broker.list": "kafka:9092",
       "group.id": "kafka-rest-group",
       "event_cb": true,
       "compression.codec": "none",
@@ -25,7 +25,7 @@ const config = {
   producer: {
     noptions: {
       //"debug": "all",
-      "metadata.broker.list": "localhost:9092",
+      "metadata.broker.list": "kafka:9092",
       "client.id": "kafka-rest-client",
       "event_cb": true,
       "compression.codec": "none",
