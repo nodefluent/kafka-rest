@@ -2,10 +2,10 @@
 const debug = require("debug");
 
 const logger = {
-  debug: debug("node-kafka-rest:debug"),
-  info: debug("node-kafka-rest:info"),
-  warn: debug("node-kafka-rest:warn"),
-  error: debug("node-kafka-rest:error")
+  debug: debug("kafka-rest:debug"),
+  info: debug("kafka-rest:info"),
+  warn: debug("kafka-rest:warn"),
+  error: debug("kafka-rest:error")
 };
 
 module.exports= {
