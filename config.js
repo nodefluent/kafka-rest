@@ -17,6 +17,7 @@ const config = {
       "group.id": "kafka-rest-group",
       "event_cb": true,
       "compression.codec": "none",
+      "enable.auto.commit": false
     },
     tconf: {
     }
