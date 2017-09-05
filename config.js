@@ -8,17 +8,33 @@ const logger = {
   error: debug("kafka-rest:error")
 };
 
-module.exports= {
+const config = {
   logger,
-  noptions: {
-    //"debug": "all",
-    //"metadata.broker.list": "localhost:9092", // for local development with kafka-setup
-    "metadata.broker.list": "kafka:9092",
-    "group.id": "kafka-rest",
-    "event_cb": true,
-    "compression.codec": "none",
+  consumer: {
+    noptions: {
+      //"debug": "all",
+      "metadata.broker.list": "localhost:9092",
+      "group.id": "kafka-rest-group",
+      "event_cb": true,
+      "compression.codec": "none",
+    },
+    tconf: {
+    }
+  },
+  producer: {
+    noptions: {
+      //"debug": "all",
+      "metadata.broker.list": "localhost:9092",
+      "client.id": "kafka-rest-client",
+      "event_cb": true,
+      "compression.codec": "none",
+    },
+    tconf: {
+    }
   },
   http:{
     port: 8082
   }
 };
+
+module.exports= config;
