@@ -1,7 +1,8 @@
 {
   "name": "node-kafka-rest",
-  "version": "1.0.0",
+  "version": "0.11.0",
   "main": "index.js",
+  "description": "kafka consumer & producer via HTTP REST",
   "scripts": {
     "start": "node index.js",
     "lint": "eslint .",
@@ -13,7 +14,7 @@
     "test": "npm run lint && istanbul cover _mocha -- -R spec test/int/* && istanbul check-coverage --statements 50"
   },
   "repository": "git@github.com:nodefluent/node-kafka-rest.git",
-  "author": "nodefluent",
+  "author": "Chris Froehlingsdorf <chris@5cf.de>",
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.0",
