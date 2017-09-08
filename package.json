@@ -10,7 +10,9 @@
     "kafka:start": "./kafka-setup/start.sh",
     "kafka:stop": "./kafka-setup/stop.sh",
     "kafka:logs": "docker-compose --file ./kafka-setup/docker-compose.yml logs -f",
-    "kafka:build": "docker-compose --file ./kafka-setup/docker-compose.yml build",
+    "kafka:log": "docker logs kafkasetup_kafka-rest_1 -f",
+    "kafka:build": "docker-compose --file ./kafka-setup/docker-compose.yml build --no-cache",
+    "kafka:rick": "yarn kafka:stop && yarn kafka:build && yarn kafka:start && yarn kafka:log",
     "test": "npm run lint && istanbul cover _mocha -- -R spec test/int/* && istanbul check-coverage --statements 50"
   },
   "repository": "git@github.com:nodefluent/node-kafka-rest.git",
