@@ -13,6 +13,8 @@
     "kafka:log": "docker logs kafkasetup_kafka-rest_1 -f",
     "kafka:build": "docker-compose --file ./kafka-setup/docker-compose.yml build",
     "kafka:rick": "yarn kafka:stop && yarn kafka:build && yarn kafka:start && yarn kafka:log",
+    "kafka:producer": "docker exec -it \"$(docker ps -aqf 'name=kafkasetup_kafka_1')\" bash -c 'kafka-console-producer.sh --topic=test --broker-list=localhost:9092'",
+    "kafka:consumer": "docker exec -it \"$(docker ps -aqf 'name=kafkasetup_kafka_1')\" bash -c 'kafka-console-consumer.sh --topic=test --bootstrap-server=localhost:9092 --from-beginning'",
     "test": "npm run lint && istanbul cover _mocha -- -R spec test/int/* && istanbul check-coverage --statements 50"
   },
   "repository": "git@github.com:nodefluent/node-kafka-rest.git",
