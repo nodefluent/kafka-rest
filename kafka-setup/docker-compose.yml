@@ -26,7 +26,7 @@ services:
   kafka-rest:
     build:
       context: ../
-      dockerfile: Dockerfile
+      dockerfile: local.Dockerfile
     ports:
       - 8082:8082
     links:
@@ -37,6 +37,9 @@ services:
       - zookeeper
     environment:
       DEBUG: "*,-express:*,-body-parser:*"
+    volumes:
+    - ..:/usr/src/app/
+    - /usr/src/app/node_modules
 
   kafka-topics-ui:
     image: landoop/kafka-topics-ui
