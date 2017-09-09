@@ -11,6 +11,7 @@ const logger = {
 const config = {
   logger,
   consumer: {
+    autoremove: 30000,
     noptions: {
       //"debug": "all",
       "metadata.broker.list": "kafka:9092",
