@@ -23,8 +23,6 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_CREATE_TOPICS: "test:1:1"
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
 
   kafka-rest:
     build:
@@ -47,6 +45,7 @@ services:
   kafka-topics-ui:
     image: landoop/kafka-topics-ui
     restart: always
+    command: ["sleep", "5", "&&", "/run.sh"]
     ports:
       - 8000:8000
     links:
