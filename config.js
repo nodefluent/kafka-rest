@@ -40,7 +40,9 @@ const config = {
 };
 
 Object.keys(process.env).forEach((env)=>{
-  if(env.startsWith("KAFKA_REST_CONSUMER_")){
+  if(env === "KAFKA_REST_HTTP_PORT"){
+    config.http.port = process.env.KAFKA_REST_HTTP_PORT;
+  } else if(env.startsWith("KAFKA_REST_CONSUMER_")){
     config.consumer.noptions[env.slice(20).toLowerCase().replace(/_/g, ".")] = process.env[env];
   } else if(env.startsWith("KAFKA_REST_PRODUCER_")){
     config.producer.noptions[env.slice(20).toLowerCase().replace(/_/g, ".")] = process.env[env];
