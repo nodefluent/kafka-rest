@@ -80,12 +80,7 @@ curl -X GET \
 curl -X DELETE \
   http://localhost:8082/consumers/peter/instances/peter \
   -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -d '{
-    "name": "peter",
-    "format": "json",
-    "auto.offset.reset": "earliest"
-  }'
+  -H 'content-type: application/json'
 ```
 
 ## Using Docker
