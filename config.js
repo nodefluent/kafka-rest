@@ -11,10 +11,10 @@ const logger = {
 const config = {
   logger,
   consumer: {
-    autoremove: 3000000,
+    autoremove: 30000,
     noptions: {
       //"debug": "all",
-      "metadata.broker.list": "172.30.126.34:9092",
+      "metadata.broker.list": "kafka:9092",
       "group.id": "kafka-rest-group-test",
       "event_cb": true,
       "compression.codec": "none",
@@ -26,7 +26,7 @@ const config = {
   producer: {
     noptions: {
       //"debug": "all",
-      "metadata.broker.list": "172.30.126.34:9092",
+      "metadata.broker.list": "kafka:9092",
       "client.id": "kafka-rest-client-test",
       "event_cb": true,
       "compression.codec": "none",

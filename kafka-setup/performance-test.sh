@@ -2,7 +2,7 @@
 CONSUMER_PREFIX="peter"
 TOPIC="test"
 
-for index in {0..5}
+for index in {0..2}
 do
   echo
   echo "Create ${CONSUMER_PREFIX}-${index}."
@@ -26,10 +26,10 @@ do
 done
 
 echo
-echo "Wait for 10 seconds..."
-sleep 10
+echo "Wait for 6 seconds..."
+sleep 6
 
-for index in {0..5}
+for index in {0..2}
 do
   echo
   echo "Get records from ${CONSUMER_PREFIX}-${index}."
@@ -39,14 +39,12 @@ do
     -H 'content-type: application/json'
 done
 
-echo "Remove all consumers? [y/N]"
-read answer
-if echo "$answer" | grep -iq "^y" ;then
-  for index in {0..5}
-  do
-    curl -X DELETE \
-      http://localhost:8082/consumers/${CONSUMER_PREFIX}-${index}/instances/${CONSUMER_PREFIX}-${index} \
-      -H 'cache-control: no-cache' \
-      -H 'content-type: application/json'
-  done
-fi
+echo
+for index in {0..2}
+do
+  echo "Deleting consumer ${CONSUMER_PREFIX}-${index}."
+  curl -X DELETE \
+    http://localhost:8082/consumers/${CONSUMER_PREFIX}-${index}/instances/${CONSUMER_PREFIX}-${index} \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json'
+done
