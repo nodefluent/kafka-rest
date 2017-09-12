@@ -2,7 +2,7 @@
 CONSUMER_PREFIX="peter"
 TOPIC="test"
 
-for index in {0..2}
+for index in {0..6}
 do
   echo
   echo "Create ${CONSUMER_PREFIX}-${index}."
@@ -26,10 +26,10 @@ do
 done
 
 echo
-echo "Wait for 6 seconds..."
-sleep 6
+echo "Wait for 7 seconds..."
+sleep 7
 
-for index in {0..2}
+for index in {0..6}
 do
   echo
   echo "Get records from ${CONSUMER_PREFIX}-${index}."
@@ -40,7 +40,7 @@ do
 done
 
 echo
-for index in {0..2}
+for index in {0..6}
 do
   echo "Deleting consumer ${CONSUMER_PREFIX}-${index}."
   curl -X DELETE \
