@@ -55,3 +55,4 @@ services:
     environment:
       KAFKA_REST_PROXY_URL: "http://kafka-rest:8082"
       PROXY: "true"
+      RECORD_POLL_TIMEOUT: "5000"
