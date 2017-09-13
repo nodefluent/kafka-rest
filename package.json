@@ -25,6 +25,7 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
     "debug": "^3.0.1",
     "express": "^4.15.4",
     "sinek": "^6.1.3"
