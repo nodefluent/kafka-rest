@@ -48,7 +48,7 @@ Object.keys(process.env).forEach((env)=>{
     config.consumer.noptions[env.slice(20).toLowerCase().replace(/_/g, ".")] = process.env[env];
   } else if(env.startsWith("KAFKA_REST_PRODUCER_")){
     config.producer.noptions[env.slice(20).toLowerCase().replace(/_/g, ".")] = process.env[env];
-  } else if(env.startsWith("KAFKA_REST_")){
+  } else if(env.startsWith("KAFKA_REST_") && !env.startsWith("KAFKA_REST_UI_")){
     config.consumer.noptions[env.slice(11).toLowerCase().replace(/_/g, ".")] = process.env[env];
     config.producer.noptions[env.slice(11).toLowerCase().replace(/_/g, ".")] = process.env[env];
   }
