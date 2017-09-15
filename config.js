@@ -38,6 +38,10 @@ const config = {
   },
   http:{
     port: 8082
+  },
+  zookeeper: {
+    host: "localhost:2181",
+    timeout: 20000
   }
 };
 

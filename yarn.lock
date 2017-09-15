@@ -133,6 +133,12 @@ async@~0.2.7:
   version "0.2.10"
   resolved "https://registry.yarnpkg.com/async/-/async-0.2.10.tgz#b6bbe0b0674b9d719708ca38de8c237cb526c3d1"
 
+async@~2.1.4:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.1.5.tgz#e587c68580994ac67fc56ff86d3ac56bdbe810bc"
+  dependencies:
+    lodash "^4.14.0"
+
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
@@ -985,7 +991,7 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.4, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.4, lodash@^4.3.0, lodash@~4.17.2:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -1065,6 +1071,10 @@ nan@2.3.5:
 nan@2.x:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.7.0.tgz#d95bf721ec877e08db276ed3fc6eb78f9083ad46"
+
+nan@~2.5.0:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.5.1.tgz#d5b01691253326a97a2bbee9e61c55d8d60351e2"
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -1663,3 +1673,11 @@ write@^0.2.1:
 yallist@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
+
+zookeeper@^3.4.9-3:
+  version "3.4.9-3"
+  resolved "https://registry.yarnpkg.com/zookeeper/-/zookeeper-3.4.9-3.tgz#124fe40110b994a4a455c2bdd4e325899d55663a"
+  dependencies:
+    async "~2.1.4"
+    lodash "~4.17.2"
+    nan "~2.5.0"
