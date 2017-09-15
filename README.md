@@ -2,8 +2,7 @@
 
 wip :fire:
 
-> NOTE: the goal of this project is to mimic confluent/kafka-rest-proxy to offer a faster interface to topic data for applications
-like kafka-topics-ui, as kafka-rest-proxy troubles with larger message payloads or a large amount of messages on the topic.
+> NOTE: the goal of this project is to mimic confluent/kafka-rest-proxy to offer a faster interface to topic data for applications like kafka-topics-ui, as kafka-rest-proxy troubles with larger message payloads or a large amount of messages on the topic. If you are looking for a complete rest-proxy for kafka, this is not the tool you are looking for.
 
 ## Quick start
 - Run kafka-setup: `yarn run kafka:start`
