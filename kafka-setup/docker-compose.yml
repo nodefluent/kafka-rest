@@ -27,7 +27,7 @@ services:
   kafka-rest:
     build:
       context: ../
-      dockerfile: local.Dockerfile
+      dockerfile: alpine.Dockerfile
     ports:
       - 8082:8082
     links:
@@ -38,21 +38,9 @@ services:
       - zookeeper
     environment:
       DEBUG: "*,-express:*,-body-parser:*"
+      KAFKA_REST_ZOOKEEPER_HOST: "zookeeper:2181"
+      KAFKA_REST_CONSUMER_METADATA_BROKER_LIST: "kafka:9092"
+      KAFKA_REST_PRODUCER_METADATA_BROKER_LIST: "kafka:9092"
     volumes:
     - ..:/usr/src/app/
     - /usr/src/app/node_modules
-
-  kafka-topics-ui:
-    image: landoop/kafka-topics-ui
-    restart: always
-    command: ["sleep", "5", "&&", "/run.sh"]
-    ports:
-      - 8000:8000
-    links:
-      - kafka-rest
-    depends_on:
-      - kafka-rest
-    environment:
-      KAFKA_REST_PROXY_URL: "http://kafka-rest:8082"
-      PROXY: "true"
-      RECORD_POLL_TIMEOUT: "5000"
