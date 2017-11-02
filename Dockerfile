@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:9
 
 RUN mkdir -p /usr/src/app \
   && apt-get update && apt-get install -y build-essential python librdkafka-dev libsasl2-dev libsasl2-modules openssl \
