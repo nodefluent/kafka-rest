@@ -28,11 +28,11 @@
     "cors": "^2.8.4",
     "debug": "^3.1.0",
     "express": "^4.16.2",
-    "sinek": "^6.5.0",
+    "sinek": "^6.11.0",
     "zookeeper": "^3.4.9-3"
   },
   "devDependencies": {
-    "eslint": "^4.9.0",
+    "eslint": "^4.10.0",
     "istanbul": "^0.4.5",
     "mocha": "^4.0.1"
   }

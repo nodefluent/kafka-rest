@@ -575,9 +575,9 @@ eslint-scope@^3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint@^4.9.0:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.9.0.tgz#76879d274068261b191fe0f2f56c74c2f4208e8b"
+eslint@^4.10.0:
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.10.0.tgz#f25d0d7955c81968c2309aa5c9a229e045176bb7"
   dependencies:
     ajv "^5.2.0"
     babel-code-frame "^6.22.0"
@@ -1292,9 +1292,9 @@ node-gyp@3.4.0:
     tar "^2.0.0"
     which "1"
 
-node-rdkafka@~2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/node-rdkafka/-/node-rdkafka-2.0.0.tgz#188b15d95a5d5eae09a5097b2e649b5877159fd9"
+node-rdkafka@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/node-rdkafka/-/node-rdkafka-2.1.1.tgz#b15a2234b69df0f2d27295fbabb4a2b1f00058e4"
   dependencies:
     bindings "1.x"
     nan "2.x"
@@ -1638,9 +1638,9 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
-sinek@^6.5.0:
-  version "6.5.0"
-  resolved "https://registry.yarnpkg.com/sinek/-/sinek-6.5.0.tgz#02453f704d069812ec83bcf310fb82b0295c8d79"
+sinek@^6.11.0:
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/sinek/-/sinek-6.11.0.tgz#d98654592f29572f7edf9a77c84e589b57ccfc92"
   dependencies:
     async "~2.5.0"
     bluebird "~3.5.0"
@@ -1649,7 +1649,7 @@ sinek@^6.5.0:
     murmurhash "~0.0.2"
     uuid "~3.1.0"
   optionalDependencies:
-    node-rdkafka "~2.0.0"
+    node-rdkafka "^2.1.0"
 
 slice-ansi@0.0.4:
   version "0.0.4"
