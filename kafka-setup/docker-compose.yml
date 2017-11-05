@@ -27,7 +27,7 @@ services:
   kafka-rest:
     build:
       context: ../
-      dockerfile: alpine.Dockerfile
+      dockerfile: Dockerfile
     ports:
       - 8082:8082
     links:
@@ -37,7 +37,7 @@ services:
       - kafka
       - zookeeper
     environment:
-      DEBUG: "*,-express:*,-body-parser:*"
+      DEBUG: "*"
       KAFKA_REST_ZOOKEEPER_HOST: "zookeeper:2181"
       KAFKA_REST_CONSUMER_METADATA_BROKER_LIST: "kafka:9092"
       KAFKA_REST_PRODUCER_METADATA_BROKER_LIST: "kafka:9092"
