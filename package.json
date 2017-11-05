@@ -1,6 +1,6 @@
 {
   "name": "node-kafka-rest",
-  "version": "0.14.1",
+  "version": "0.14.2",
   "main": "index.js",
   "description": "kafka consumer & producer via HTTP REST",
   "scripts": {
