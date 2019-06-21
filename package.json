@@ -1,6 +1,6 @@
 {
   "name": "node-kafka-rest",
-  "version": "0.14.2",
+  "version": "0.15.0",
   "main": "index.js",
   "description": "kafka consumer & producer via HTTP REST",
   "scripts": {
@@ -17,23 +17,24 @@
     "kafka:consumer": "docker exec -it kafkasetup_kafka_1 bash -c 'kafka-console-consumer.sh --topic=test --bootstrap-server=localhost:9092 --from-beginning'",
     "kafka:generate-data": "while IFS= read line; do echo \"echo '$line' | kafka-console-producer.sh --topic=test --broker-list=localhost:9092 --property='parse.key=true' --property='key.separator=#' \" | docker exec -i kafkasetup_kafka_1 bash -; done< ./kafka-setup/test-data.txt",
     "test": "npm run lint && istanbul cover _mocha -- -R spec test/int/* && istanbul check-coverage --statements 50",
-    "kafka:load-test": "./kafka-setup/performance-test.sh"
+    "kafka:load-test": "./kafka-setup/performance-test.sh",
+    "yarn:openssl": "LDFLAGS='-L/usr/local/opt/openssl/lib' CPPFLAGS='-I/usr/local/opt/openssl/include' yarn"
   },
   "repository": "git@github.com:nodefluent/node-kafka-rest.git",
   "author": "Chris Froehlingsdorf <chris@5cf.de>",
   "license": "MIT",
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "body-parser": "^1.18.2",
-    "cors": "^2.8.4",
-    "debug": "^3.1.0",
-    "express": "^4.16.2",
-    "sinek": "^6.12.0",
-    "zookeeper": "^3.4.9-3"
+    "bluebird": "^3.5.5",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "sinek": "^7.29.3",
+    "zookeeper": "^4.1.1"
   },
   "devDependencies": {
-    "eslint": "^4.10.0",
+    "eslint": "^5.16.0",
     "istanbul": "^0.4.5",
-    "mocha": "^4.0.1"
+    "mocha": "^6.1.4"
   }
 }
